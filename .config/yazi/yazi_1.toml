@@ -1,0 +1,9 @@
+[openr]
+brave = [
+  { run = 'brave "$@"', orphan = true, desc = "Brave"}
+]
+
+[open]
+rules = [
+  {mime = "application/pdf", use = ["brave", "open"]}
+]
