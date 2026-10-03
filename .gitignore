@@ -14,3 +14,5 @@ settings.json
 .config/cmus/search-history
 .config/yazi/flavor/flavor.toml
 .config/yazi/flavors/flavor.toml
+.config/cava/themes/cava-colors
+.config/yazi/flavors/matugen.yazi/flavor.toml
