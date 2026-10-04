@@ -88,7 +88,6 @@ alias ldate="eza -la --sort=date --icons=auto"
 # --- Editors & Configuration Management ---
 #===================================================================================
 alias vi="nvim"
-alias nvim="nvim ."
 alias y="yazi"
 alias bee="cmus"
 alias fs="fastfetch"
