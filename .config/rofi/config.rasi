@@ -69,9 +69,9 @@ configuration {
 	display-filebrowser: "Files";
 
 	/*---------- Misc setting ----------*/
-	terminal: "kitty";
+	terminal: "rofi-sensible-terminal";
 	font: "Mono 12";
-	sort: true;
+	sort: false;
 	threads: 0;
 	click-to-exit: true;
 /*	ignored-prefixes: "";*/
