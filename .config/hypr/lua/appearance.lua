@@ -1,3 +1,8 @@
+-- imports
+-----------------------
+local colors = dofile(os.getenv("HOME") .. "/.cache/wal/hyprland.lua")
+-----------------------
+
 ----MONITORS ----
 
 hl.monitor({
@@ -19,12 +24,12 @@ hl.config({
 		col = {
 			active_border = {
 				colors = {
-					"rgba(7aa2f7ee)",
-					"rgba(bb9af7ee)",
+					"rgba(" .. colors.color4:gsub("#", "") .. "ee)",
+					"rgba(" .. colors.color5:gsub("#", "") .. "ee)",
 				},
 				angle = 45,
 			},
-			inactive_border = "rgba(585b70aa)",
+			inactive_border = "rgba(" .. colors.color8:gsub("#", "") .. "ee)",
 		},
 		resize_on_border = false,
 		allow_tearing = true,
