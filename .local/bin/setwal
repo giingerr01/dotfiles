@@ -18,6 +18,7 @@ awww img "$img" --transition-type fade --transition-duration 2
 
 # Generate colors
 wal -i "$img" &
+
 #cava refresh
 pkill -USR1 -x cava
 
