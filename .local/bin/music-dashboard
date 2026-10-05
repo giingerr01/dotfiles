@@ -1,0 +1,5 @@
+#!/bin/env zsh
+
+kitty --class my-terminal &
+kitty --class cava -e cava &
+sonora &
