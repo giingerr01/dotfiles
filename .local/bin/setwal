@@ -19,10 +19,10 @@ awww img "$img" --transition-type fade --transition-duration 2
 # Generate colors
 wal -i "$img" &
 
-#cava refresh
-pkill -USR1 -x cava
-
 # Live colors reload for Kitty
 kitty @set-colors -a ~/.cache/wal/colors-kitty.conf 2>/dev/null || killall -USR1 kitty
+
+#cava refresh
+pkill -USR1 -x cava
 
 echo "Applied wallpaper + theme: $img"
