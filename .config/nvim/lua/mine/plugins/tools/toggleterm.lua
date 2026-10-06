@@ -5,7 +5,7 @@ return {
 		-- Automatically set working directory to current active buffer
 		dir = "buffer",
 		open_mapping = [[<C-/>]],
-		direction = "horizontal", -- Options: 'horizontal', 'vertical', 'float', 'tab'
+		direction = "float", -- Options: 'horizontal', 'vertical', 'float', 'tab'
 		shade_terminals = true,
 		float_opts = {
 			border = "curved",
