@@ -7,7 +7,7 @@ return {
 			-- Enable subtle background transparency to keep your hyprland blur/wallpaper showing
 			vim.g.nord_contrast = true
 			vim.g.nord_borders = true
-			vim.g.nord_disable_background = false -- Set to false if you prefer solid dark backgrounds
+			vim.g.nord_disable_background = true -- Set to false if you prefer solid dark backgrounds
 
 			require("nord").set()
 		end,
