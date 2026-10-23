@@ -20,6 +20,7 @@ export VISUAL="nvim"
 export DOTNET_ROOT=/usr/share/dotnet
 export PATH=$PATH:$DOTNET_ROOT:$HOME/.dotnet/tools
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (eza --tree --level=2 --color=always {} || ls -l {})) || echo {} 2> /dev/null | head -200'"
+alias fkill="ps -ef | sed 1d | fzf -m | awk '{print \$2}' | xargs kill -9"
 #===================================================================================
 #===================================================================================
 
