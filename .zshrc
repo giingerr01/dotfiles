@@ -55,6 +55,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Aliases# --- Navigation & General Core ---
 #===================================================================================
 alias cls="clear"
+alias ff="fzf"
 alias q="exit"
 alias cd..="cd .."
 alias ..="cd .."
