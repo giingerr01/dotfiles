@@ -2,30 +2,30 @@ local M = {}
 
 function M.cowboy()
 	local count = 0
-	local timer
+	local timer = vim.uv.new_timer()
 	local notification_id
 
-	for _, key in ipairs({ "h", "j", "k", "l", "+", "-" }) do
-		local map = key
+	local function reset()
+		count = 0
+		notification_id = nil
+	end
 
-		vim.keymap.set("n", key, function()
+	for _, key in ipairs({ "h", "j", "k", "l", "+", "-" }) do
+		-- Keep gj/gk behavior for wrapped lines, like LazyVim's defaults
+		local map = (key == "j" or key == "k") and ("g" .. key) or key
+
+		vim.keymap.set({ "n", "x" }, key, function()
 			-- Intentional count motion like 10j
 			if vim.v.count > 0 then
-				count = 0
-				return map
+				reset()
+				return key
 			end
 
 			count = count + 1
 
-			if timer then
-				timer:stop()
-			end
-
-			-- Unlock after 2 seconds of not using the cowboy keys.
-			timer = vim.defer_fn(function()
-				count = 0
-				notification_id = nil
-			end, 2000)
+			-- Unlock after 2 seconds of not using the cowboy keys
+			timer:stop()
+			timer:start(2000, 0, vim.schedule_wrap(reset))
 
 			if count >= 10 then
 				if not notification_id then
@@ -37,15 +37,11 @@ function M.cowboy()
 						end,
 					})
 				end
-
 				return ""
 			end
 
 			return map
-		end, {
-			expr = true,
-			silent = true,
-		})
+		end, { expr = true, silent = true })
 	end
 end
 
