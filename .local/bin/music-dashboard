@@ -2,4 +2,4 @@
 
 kitty --class my-terminal &
 kitty --class cava -e cava &
-sonora &
+kitty --class cmus -e cmus &
