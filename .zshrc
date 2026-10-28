@@ -159,6 +159,7 @@ source /usr/share/fzf/completion.zsh
 #===================================================================================
 
 alias cls="clear"
+alias cat="bat"
 alias ff="fzf"
 alias top="btop"
 alias du="ncdu"
@@ -308,4 +309,5 @@ command_not_found_handler() {
 
   return 127
 }
+
 eval "$(starship init zsh)"
