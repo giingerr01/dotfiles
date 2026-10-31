@@ -1,7 +1,7 @@
 # Theme
 theme = "Catppuccin Macchiato"
-font-family = "JetBrains Mono nerd"
-font-synthetic-style = false
+font-family = "JetBrainsMono Nerd Font"
+font-synthetic-style = true
 font-size = 12
 
 # Custom Shader
