@@ -13,4 +13,4 @@ WALL_NAME=$(find "$WALL_DIR/$CATEGORY" -type f -printf "%f\n" | rofi -dmenu -p "
 WALL="$WALL_DIR/$CATEGORY/$WALL_NAME"
 
 # Execute setwal ---
-"/home/aditya_sharma/dotfiles/.local/bin/setwal" "$WALL"
+"/home/gingerr/dotfiles/.local/bin/setwal" "$WALL"
