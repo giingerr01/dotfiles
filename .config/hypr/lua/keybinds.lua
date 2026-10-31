@@ -2,7 +2,7 @@
 ---- MY PROGRAM ----
 --------------------
 
-local terminal = "ghostty"
+local terminal = "env EGL_PLATFORM=wayland kitty"
 local fileManager = "nemo"
 local browser = "firefox"
 
