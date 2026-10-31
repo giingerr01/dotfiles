@@ -1,0 +1,25 @@
+gui:
+  scrollHeight: 5
+  showIcons: true
+  nerdFontsVersion: "3"
+  theme:
+    activeBorderColor:
+      - "#a6e3a1"
+      - bold
+    inactiveBorderColor:
+      - "#585b70"
+    searchingActiveBorderColor:
+      - "#f9e2af"
+      - bold
+    optionsTextColor:
+      - "#89b4fa"
+    selectedLineBgColor:
+      - "#313244"
+    cherryPickedCommitBgColor:
+      - "#45475a"
+    cherryPickedCommitFgColor:
+      - "#f2cdcd"
+    unstagedChangesColor:
+      - "#f38ba8"
+    defaultFgColor:
+      - "#cdd6f4"
