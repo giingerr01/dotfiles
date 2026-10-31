@@ -13,6 +13,7 @@ settings.json
 /.config/pulse/cookie
 /dconf/*
 dconf/user
+/.config/dconf/user
 *pl
 .config/nvim/.neoconf.json
 .config/nvim/lazy-lock.json
