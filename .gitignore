@@ -11,6 +11,8 @@ settings.json
 /.config/mozilla/
 /.config/Code/
 /.config/pulse/cookie
+/dconf/*
+dconf/user
 *pl
 .config/nvim/.neoconf.json
 .config/nvim/lazy-lock.json
