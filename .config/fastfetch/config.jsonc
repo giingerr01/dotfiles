@@ -82,23 +82,17 @@
       "keyColor": "blue"
     },
     {
-      "type": "gpu",
-      "format": "{3}",
-      "key": "   GPU Driver",
-      "keyColor": "magenta"
-    },
-    {
       "type": "memory",
       "key": "  󰍛 Memory ",
       "keyColor": "magenta"
     },
-    {
-      "type": "disk",
-      "key": "  󱦟 OS Age ",
-      "folders": "/",
-      "keyColor": "red",
-      "format": "{days} days"
-    },
+    // {
+    //   "type": "disk",
+    //   "key": "  󱦟 OS Age ",
+    //   "folders": "/",
+    //   "keyColor": "red",
+    //   "format": "{days} days"
+    // },
     {
       "type": "uptime",
       "key": "  󱫐 Uptime ",
