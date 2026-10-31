@@ -137,6 +137,7 @@ mkcd() {
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Case-insensitive completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"     # Colored completions
+fpath=(/usr/share/zsh/site-functions/ $fpath)
 autoload -Uz compinit && compinit
 
 #===================================================================================
@@ -149,6 +150,8 @@ autoload -Uz compinit && compinit
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+#fzf integraations
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 #===================================================================================
