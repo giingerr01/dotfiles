@@ -10,7 +10,7 @@ function M.cowboy()
 		notification_id = nil
 	end
 
-	for _, key in ipairs({ "h", "j", "k", "l", "+", "-" }) do
+	for _, key in ipairs({ "h", "l", "+", "-" }) do
 		-- Keep gj/gk behavior for wrapped lines, like LazyVim's defaults
 		local map = (key == "j" or key == "k") and ("g" .. key) or key
 
