@@ -8,6 +8,7 @@ command-history
 settings.json
 .config/sonora/settings.json
 /home/aditya_sharma/dotfiles/.config/cmus/lib.pl
+/mozila
 *pl
 .config/nvim/.neoconf.json
 .config/nvim/lazy-lock.json
