@@ -2,9 +2,9 @@
 ---- MY PROGRAM ----
 --------------------
 
-local terminal = "kitty"
+local terminal = "ghostty"
 local fileManager = "nemo"
-local browser = "brave"
+local browser = "firefox"
 
 -- local menu = "rofi -show drun"
 
