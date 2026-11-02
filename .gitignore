@@ -18,3 +18,5 @@ dconf/user
 .config/nvim/.neoconf.json
 .config/nvim/lazy-lock.json
 .config/cmus/search-history
+.shocket
+*.shocket
