@@ -20,3 +20,20 @@ dconf/user
 .config/cmus/search-history
 .shocket
 *.shocket
+
+# System runtime and user state
+.config/rescrobbled/session
+.cache/
+.local/state/
+.local/share/Trash/
+.local/share/recently-used.xbel
+.config/*/cache/
+.config/*/state/
+.config/*/sessions/
+.Xauthority
+.ICEauthority
+.xsession-errors*
+.bash_history
+.zsh_history
+.lesshst
+.viminfo
