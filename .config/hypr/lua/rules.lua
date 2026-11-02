@@ -43,27 +43,3 @@ hl.layer_rule({
 	blur = true,
 	ignore_alpha = 0.2,
 })
-
--- hl.window_rule({
--- 	name = "cava-popup",
--- 	match = {
--- 		class = "^cava$",
--- 	},
--- 	float = true,
--- })
---
--- hl.window_rule({
--- 	name = "sized-terminal",
--- 	match = {
--- 		class = "^my-terminal$",
--- 	},
--- 	float = true,
--- })
---
--- hl.window_rule({
--- 	name = "sonora-custom",
--- 	match = {
--- 		class = "^sonora$",
--- 	},
--- 	float = true,
--- })
