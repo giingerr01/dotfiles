@@ -1,5 +1,5 @@
 #!/bin/env zsh
 
-kitty --class my-terminal &
-kitty --class cava -e cava &
-kitty --class cmus -e cmus &
+foot --class my-terminal &
+foot --class cava -e cava &
+foot --class cmus -e cmus &
