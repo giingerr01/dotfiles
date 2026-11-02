@@ -1,4 +1,5 @@
 
+DISABLE_AUTO_TITLE="true"
 #===================================================================================
 # startup inits
 #===================================================================================
@@ -122,7 +123,7 @@ setopt HIST_IGNORE_ALL_DUPS   # Do not record duplicate entries
 # --- Source Pywal Colors (if generated) ---
 #===================================================================================
 
-[ -f ~/.cache/wal/sequences ] && cat ~/.cache/wal/sequences
+[ -f ~/.cache/wal/sequences ] && command cat ~/.cache/wal/sequences
 [ -f ~/.cache/wal/colors-tty.sh ] && source ~/.cache/wal/colors-tty.sh
 #===================================================================================
 #===================================================================================
