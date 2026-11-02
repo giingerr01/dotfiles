@@ -2,7 +2,7 @@
 ---- MY PROGRAM ----
 --------------------
 
-local terminal = "env EGL_PLATFORM=wayland kitty"
+local terminal = "foot"
 local fileManager = "nemo"
 local browser = "firefox"
 
