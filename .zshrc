@@ -167,6 +167,7 @@ source /usr/share/fzf/completion.zsh
 #===================================================================================
 
 alias cls="clear"
+alias c="cargo"
 alias cat="bat"
 alias ff="fzf"
 alias top="btop"
