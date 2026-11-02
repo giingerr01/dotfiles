@@ -168,6 +168,7 @@ source /usr/share/fzf/completion.zsh
 #===================================================================================
 
 alias cls="clear"
+alias tmn="tmux new-session -s"
 alias c="cargo"
 alias cat="bat"
 alias ff="fzf"
