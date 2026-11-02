@@ -2,7 +2,7 @@
 ---- MY PROGRAM ----
 --------------------
 
-local terminal = "foot"
+local terminal = "footclient"
 local fileManager = "nemo"
 local browser = "firefox"
 
