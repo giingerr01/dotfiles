@@ -1,5 +1,8 @@
 #!/bin/env zsh
 
-foot --class my-terminal &
-foot --class cava -e cava &
-foot --class cmus -e cmus &
+pkill -USR1 -x foot
+
+# Launch dashboard instances completely silently by redirecting standard error
+footclient --class my-terminal 2>/dev/null &
+footclient --class cava -e cava 2>/dev/null &
+footclient --class cmus -e cmus 2>/dev/null &
