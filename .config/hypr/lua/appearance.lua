@@ -20,14 +20,14 @@ hl.config({
 	general = {
 		gaps_in = 3,
 		gaps_out = 5,
-		border_size = 0,
+		border_size = 1,
 		col = {
 			active_border = {
 				colors = {
 					"rgba(" .. colors.color4:gsub("#", "") .. "ee)",
 					-- "rgba(" .. colors.color5:gsub("#", "") .. "ee)",
 				},
-				-- angle = 45,
+				angle = 45,
 			},
 			inactive_border = "rgba(" .. colors.color8:gsub("#", "") .. "ee)",
 		},
