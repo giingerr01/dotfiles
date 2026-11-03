@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 
+#sewal
 img="$1"
 
 # Fallback if no argument passed
@@ -17,10 +18,10 @@ pgrep -x "awww-daemon" >/dev/null || (
 awww img "$img" --transition-type fade --transition-duration 2
 
 # Generate colors
-wal -i "$img" &
+wal -i "$img"
 
-# Live colors reload for Kitty
-kitty @set-colors -a ~/.cache/wal/colors-kitty.conf 2>/dev/null || killall -USR1 kitty
+#refresh foot
+pkill -SIGUSR1 -x foot
 
 #cava refresh
 pkill -USR1 -x cava
