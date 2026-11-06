@@ -15,7 +15,8 @@ opt.number = true -- Show line numbers
 opt.relativenumber = true -- Relative line numbers for easier navigation
 opt.signcolumn = "yes" -- Always show sign column (prevents text shift for diagnostics)
 opt.cursorline = true -- Highlight current line
-opt.wrap = false -- Disable line wrapping
+opt.wrap = true -- Disable line wrapping
+opt.linebreak = true
 opt.termguicolors = true -- True color support
 
 -- Indentation & Tabs
