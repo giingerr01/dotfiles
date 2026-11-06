@@ -2,20 +2,16 @@
 
 ## Screenshots
 
-### Teal desktop
+### Desktop
 
 ![Whole DeskTop](assets/Desktop_overview.png)
 
-### Red desktop
-
 ![Hand Picked Wallpapers](assets/crimson_red.png)
-
-### Tools Overview
 
 ![Lazyvim and Zsh Config](assets/lazyvim_zshrc.png)
 
-### Showcase
-![Teal Theme] (assets/teal_theme.png)
+![Teal theme](assets/teal_theme.png)
+
 ## Neovim
 
 My Neovim setup is built on **LazyVim** and organized as small Lua modules. The entry point bootstraps LazyVim and loads my editor options, keymaps, and LSP setup. Plugin files are grouped by purpose, and the plugin loader recursively discovers and loads Lua modules, so adding a plugin module does not require maintaining a separate import list.
