@@ -4,15 +4,15 @@
 
 ### Teal desktop
 
-![Teal desktop with Fastfetch, music player, and Cava](assets/teal_theme.png)
+![Teal desktop with Fastfetch, music player, and Cava](assets/Dextop_overview.png)
 
 ### Red desktop
 
 ![Red desktop with Waybar, music player, and Cava](assets/crimson_red.png)
 
-### Rofi launcher
+### Tools Overview
 
-![Rofi launcher alongside music player and Cava](assets/screenshot_20261106_155459.png)
+![Lazyvim and Zsh Config](assets/lazyvim_zshrc.png)
 
 ## Neovim
 
@@ -40,6 +40,22 @@ The configuration includes language tooling, completion, formatting, testing, de
     │   ├── tools/
     │   └── ui/
     └── theme/
+```
+
+## Hyprland
+
+Hyprland is configured in Lua and split into focused modules for appearance, animations, input, window rules, startup, and keybindings. Ergonomic home-row shortcuts use **Alt + H/L** for left/right and **Alt + J/K** for up/down focus; add **Shift** to move windows instead. Alt-based shortcuts also launch common apps and control workspaces.
+
+```text
+.config/hypr/
+├── hyprland.lua          # Loads the Lua modules
+└── lua/
+    ├── animations.lua
+    ├── appearance.lua
+    ├── autostart.lua
+    ├── input.lua
+    ├── keybinds.lua
+    └── rules.lua
 ```
 
 ## Waybar
@@ -89,9 +105,6 @@ The `rofi-wallpaper` script presents wallpaper categories and choices in Rofi. `
 ├── rofi-wallpaper
 └── setwal
 
-.config/hypr/lua/
-└── autostart.lua       # Starts Waybar, Foot server, and awww daemon
-
 .config/wal/templates/
 ├── cava-colors
 ├── foot-colors.ini
@@ -133,6 +146,16 @@ Cava is themed through Pywal and includes custom shader presets.
 ├── config
 ├── shaders/
 └── themes/
+```
+
+## cmus
+
+cmus is included as a local, terminal-based music player, with a saved default playlist.
+
+```text
+.config/cmus/
+└── playlists/
+    └── Default
 ```
 
 ## Setup
