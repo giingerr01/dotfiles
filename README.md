@@ -4,7 +4,7 @@
 
 ### Teal desktop
 
-![Teal desktop with Fastfetch, music player, and Cava](assets/Dextop_overview.png)
+![Teal desktop with Fastfetch, music player, and Cava](assets/Desktop_overview.png)
 
 ### Red desktop
 
