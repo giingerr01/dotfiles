@@ -1,1 +1,0 @@
-# wallpapers are coming soon
