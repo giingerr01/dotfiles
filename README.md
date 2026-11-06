@@ -4,16 +4,18 @@
 
 ### Teal desktop
 
-![Teal desktop with Fastfetch, music player, and Cava](assets/Desktop_overview.png)
+![Whole DeskTop](assets/Desktop_overview.png)
 
 ### Red desktop
 
-![Red desktop with Waybar, music player, and Cava](assets/crimson_red.png)
+![Hand Picked Wallpapers](assets/crimson_red.png)
 
 ### Tools Overview
 
 ![Lazyvim and Zsh Config](assets/lazyvim_zshrc.png)
 
+### Showcase
+![Teal Theme] (assets/teal_theme.png)
 ## Neovim
 
 My Neovim setup is built on **LazyVim** and organized as small Lua modules. The entry point bootstraps LazyVim and loads my editor options, keymaps, and LSP setup. Plugin files are grouped by purpose, and the plugin loader recursively discovers and loads Lua modules, so adding a plugin module does not require maintaining a separate import list.
@@ -33,13 +35,22 @@ The configuration includes language tooling, completion, formatting, testing, de
     ├── lazy/         # Lazy.nvim bootstrap
     ├── lsp/          # LSP, Mason, diagnostics
     ├── plugins/
-    │   ├── init.lua  # Recursively loads plugin modules (just return any plgin spec in the plugins folder no matter how nested it is)
+    │   ├── init.lua  # Recursively loads nested plugin modules
     │   ├── coding/
     │   ├── editor/
     │   ├── git/
     │   ├── tools/
     │   └── ui/
     └── theme/
+```
+
+## Zsh tools
+
+The Zsh setup brings together **ripgrep**, **fzf**, and **bat** for quick, interactive workflows. `rgf` searches with ripgrep and lets you preview matches with bat or open them directly in Neovim. Fzf also powers file, directory, and history pickers with previews. Custom helpers include `fzf-git-checkout` for choosing branches and `mkcd` for creating and entering a directory; aliases provide quick access to common tools.
+
+```text
+.zshrc     # Shell setup, fzf integrations, helpers, aliases, and keybindings
+.zprofile  # Loads .zshrc
 ```
 
 ## Hyprland
