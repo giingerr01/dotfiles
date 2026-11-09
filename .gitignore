@@ -21,6 +21,11 @@ dconf/user
 .socket
 *.socket
 
+# Keep only the two Cava shaders tracked by this repo.
+.config/cava/shaders/*
+!.config/cava/shaders/bar_spectrum.frag
+!.config/cava/shaders/pass_through.vert
+
 # System runtime and user state
 .config/rescrobbled/session
 .cache/
