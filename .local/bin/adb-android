@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+PHONE="192.168.29.31"
+
+adb connect "$PHONE" 2>/dev/null
+
+exec adb shell
