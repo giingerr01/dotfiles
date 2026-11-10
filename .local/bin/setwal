@@ -26,4 +26,7 @@ pkill -SIGUSR1 -x foot
 #cava refresh
 pkill -USR1 -x cava
 
+# refresh hyprland
+hyprctl reload
+
 echo "Applied wallpaper + theme: $img"
