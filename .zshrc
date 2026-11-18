@@ -40,7 +40,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 autoload -Uz compinit
-compinit
+# compinit -C
 
 
 #===================================================================================
@@ -138,23 +138,31 @@ rgf() {
 fzf-git-checkout() {
     local branch
 
-    branch=$(git branch -a --color=always |
-        grep -v '/HEAD\s' |
-        sed 's/^..//' |
-        fzf --ansi \
-            --preview 'git log --graph --oneline --color=always --max-count=50 {1}' \
-            --prompt="Checkout Branch > ")
+    branch=$(
+        git for-each-ref \
+            --format='%(refname:short)' \
+            refs/heads refs/remotes |
+        grep -v '/HEAD$' |
+        fzf \
+            --preview='git log --graph --oneline --color=always --max-count=30 {1}' \
+            --prompt="Checkout Branch > "
+    ) || return
 
-    if [[ -n "$branch" ]]; then
-        branch=$(echo "$branch" |
-            tr -d '[:space:]' |
-            sed 's#origin/##')
+    [[ -z "$branch" ]] && return 0
 
-        git checkout "$branch"
+    if [[ "$branch" == */* ]]; then
+        local remote="${branch%%/*}"
+        local name="${branch#*/}"
+
+        if git show-ref --verify --quiet "refs/heads/$name"; then
+            git switch "$name"
+        else
+            git switch --track "$branch"
+        fi
+    else
+        git switch "$branch"
     fi
 }
-
-
 #===================================================================================
 # --- Custom Functions ---
 #===================================================================================
@@ -219,10 +227,30 @@ alias del="sudo pacman -Rns"
 alias ins="sudo pacman -S"
 alias pls="sudo"
 
-alias cleanup="sudo pacman -Rns \$(pacman -Qdtq)"
 
+#clean up for orphan packages
+cleanup() {
+    local orphans
+
+    orphans=("${(@f)$(pacman -Qdtq)}")
+
+    if [[ -z "$orphans" || ${#orphans[@]} -eq 0 ]]; then
+        echo "No orphan packages found."
+        return 0
+    fi
+
+    echo "The following orphan packages will be removed:"
+    printf '  %s\n' "${orphans[@]}"
+
+    echo
+    sudo pacman -Rns -- "${orphans[@]}"
+}
+
+
+# Mirrorlist
 alias mirrors="sudo reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 
+# yay commandss
 alias yayup="yay -Syu"
 alias yayin="yay -S"
 
