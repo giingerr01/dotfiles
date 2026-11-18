@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+#default destination
+
+PROJECT_DIR="$HOME/Workspace"
+
+if [ -z "$1" ]; then
+  echo "Usage: cgit <repository-urls>"
+  exit 1
+fi
+
+mdkir -p "PROJECT_DIR"
+
+Clone  Repository
+git clone "$1" "$PROJECT_DIR/$(basename "$1" .git)"
