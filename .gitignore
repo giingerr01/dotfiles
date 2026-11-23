@@ -26,6 +26,8 @@ dconf/user
 .config/cava/shaders/*
 !.config/cava/shaders/bar_spectrum.frag
 !.config/cava/shaders/pass_through.vert
+.config/opencode/**
+.config/opencode/service.json
 
 # System runtime and user state
 .config/rescrobbled/session
