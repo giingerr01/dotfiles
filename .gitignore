@@ -28,6 +28,7 @@ dconf/user
 !.config/cava/shaders/pass_through.vert
 .config/opencode/**
 .config/opencode/service.json
+.config/MusicShii/settings.toml
 
 # System runtime and user state
 .config/rescrobbled/session
